@@ -1,0 +1,203 @@
+/*--------------
+TABLETS
+----------------*/
+@media only screen and (max-width: 768px) {
+	
+	/*----------------------------------------------------
+	MOBILE MENU
+	------------------------------------------------------*/
+	#menu-primary-menu {
+		flex-direction: column;
+		padding: 0;
+		background-color: #000;
+	}
+	
+	#menu-primary-menu > li {
+		margin: 0;
+		width: 100%;
+		
+	}
+	
+	#menu-primary-menu > li:hover {
+		background-color: #64138e;
+	}
+	
+	#menu-primary-menu a {
+		display: block;
+		padding: 5px 2vw;
+	}
+	
+	.menu-toggle {
+		display: block;
+		border: none;
+		font-size: 3vh;
+		font-weight: bold;
+		margin-left: 92vw;
+		padding: 0.5vw 2vw;
+		background-color: #7b19af;
+		cursor: pointer;
+		position: fixed;
+		z-index: 100;
+		border-radius: 5px;
+	}
+	
+	.main-navigation {
+		background-color: #000;
+	}
+	
+	.menu-item {
+		display: none;
+	}
+	
+	nav {
+		background-color: transparent;
+	}
+	
+	/*----------------------------------
+	FRONT PAGE
+	-----------------------------------*/
+	main {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	
+	.header {
+		background-image: url(../img/hex-head-tab-2.svg);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		padding: 35vh 10vw 0 10vw;
+		height: auto;
+	}
+	
+	.header h2 {
+		padding: 0 15vw 0 15vw;
+	}
+	
+	
+	.front-1 {
+		background: rgba(0, 0, 0, .6);
+		margin-top: -80vh;
+		margin-bottom: 30vh;
+		width: 100%;
+		height: auto;
+	}
+	
+	.front-1 p, h3 {
+		padding: 0 10vw 0 10vw;
+		
+	}
+	
+	.front-2 {
+		margin-top: -80vh;
+		background: rgba(0, 0, 0, .6);
+		height: auto;
+		margin-bottom: 5vh;
+	}
+	
+	.front-2 p, h3 {
+		padding: 0 10vw 0 10vw;
+	}
+	
+	
+	.front-3 {
+		height: auto;
+		padding-top: 5vh;
+	}
+	
+	.front-3 p, h3 {
+		padding: 0 10vw 0 10vw;
+	}
+	
+	
+	
+	.hex-3 {
+		order: 1;
+		height: auto;
+		
+	}
+	
+	.front-4 {
+		order: 2;
+		padding: 0;
+		height: auto;
+	}
+	
+	.front-4 p {
+		padding: 0 10vw 0 10vw;
+	}
+	
+	.front-4 > .wp-block-group__inner-container {
+		padding-top: 2vw;
+		margin-top: 5vw;
+	}
+	
+	/*--------------------------------
+	NEWS PAGE
+	--------------------------------*/
+	#sidebar {
+		display: none;
+	}
+	
+	#blogroll {
+		padding: 0 5vw;
+	}
+	
+	
+	/*-------------------------------
+	THE GROUP
+	--------------------------------*/
+	.members > .wp-block-group__inner-container {
+		grid-template-columns: 1fr 2fr;
+	}
+	
+	/*-------------------------------
+	TEACHING // CONTACT
+	--------------------------------*/
+	.teaching, .contact {
+		margin-top: 7vh;
+		padding: 0 7vw;
+	}
+	
+}
+
+@media only screen and (max-width: 480px){
+	
+	/*------------------------------
+	FRONT PAGE
+	-------------------------------*/
+	.header {
+		background-image: url(../img/hex-head-mob-2.svg);
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		padding: 20vh 10vw 10vh 10vw;
+		height: 100vh;
+	}
+	
+	.front-1 {
+		margin-bottom: 0;	
+	}
+	
+	.front-2 {
+		height: 100vh;
+	}
+	
+	.front-3 {
+		padding-bottom: 0;
+	}
+	
+	/*------------------------------
+	THE GROUP
+	-------------------------------*/
+	.peter-row > .wp-block-group__inner-container {
+		display: flex;
+		flex-direction: column;
+		padding: 0 2vw;
+	}
+	
+	.members > .wp-block-group__inner-container {
+		display: flex;
+		flex-direction: column;
+	}
+	
+}

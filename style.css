@@ -1,0 +1,491 @@
+/*
+Theme Name: BuddResearch
+Text Domain: BuddResearch
+Version: 0.1
+Requires at least: 4.7
+Requires PHP: 5.2.4
+Description: Theme for the website of the Budd Research Group
+Tags: blog, one-column, custom-background, custom-colors, custom-logo, custom-menu, editor-style, featured-images, footer-widgets, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready, block-styles, wide-blocks, accessibility-ready
+Author: Sophia Grimm
+Author URI: mywebsite.com
+Theme URI: mythemewebsite.com
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+All files, unless otherwise stated, are released under the GNU General Public
+License version 2.0 (http://www.gnu.org/licenses/gpl-2.0.html)
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned
+with others.
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+/*-----------------------------------------------
+BASIC SET UP
+-------------------------------------------------*/
+* {
+	font-family: 'Amiri', serif;
+	color: #eee;
+}
+
+#frontpage > h1, h2, h3 {
+	font-family: 'Open Sans', sans-serif;
+	text-transform: uppercase;
+}
+
+body {
+	/*background-image: url(./img/bg1.jpg);*/
+	background-color: #000;
+	margin: 0;
+	width: 100%;
+}
+
+.container {
+	height: 98vh;
+	/*not 100 so we won't get scrollbars (with margin it would be to big)*/
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+}
+
+main{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(5, auto);
+	position: relative;
+	grid-row-gap: 5vh;
+	margin-top: 10vh;
+}
+
+a {
+	text-decoration: none;
+	color: #7b19af;
+}
+
+
+footer {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	color: #666;
+}
+
+
+ 
+
+/*--------------------------------------------
+NAVIGATION
+---------------------------------------------*/
+nav {
+	text-align: center;
+	position: fixed;
+	z-index: 1;
+	align-self: center;
+	width: 100%;
+	margin-top: -1.1vh;
+	background-color: #000;
+	padding: 10px;
+	
+}
+
+nav ul {
+
+	list-style-type: none;
+}
+
+nav li {
+
+	display: inline;
+	
+}
+
+nav li a {
+	text-decoration: none;
+	color: #eee;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.25em;
+	padding: 1em 0.5em;
+}
+
+nav li a:hover {
+	background-color: #64138e;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+/*----------------------------------------
+FRONT PAGE
+------------------------------------------*/
+.extended {
+	display: none;
+}
+
+.header {
+	grid-column: 1/13;
+	text-align: center;
+	background-image: url(./img/hex-head5.svg);
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	/*background-attachment: fixed;
+	margin-top: 10vh;*/
+	/*height: 100%;*/
+	padding: 45vh 20vw 0 20vw;
+	height: 80vh;
+}
+
+.header h2 {
+	font-size: 4em;
+}
+
+.header p, .front-1 p, .front-2 p, .front-3 p, .front-4 p {
+	font-family: 'Amiri', serif;
+	font-style: italic;
+	font-size: 2em;
+	line-height: 1.25em;
+}
+/*First Row - PIM*/
+	#hex-1 {
+		grid-column: 1/7;
+		grid-row-start: 2;
+		position: relative;
+		height: 80vh;
+	}
+
+	.hex-border {
+		background-image: url(img/hex-border1.svg);
+	}
+
+	.hex-full{
+		background-image: url(img/hex1.svg);
+	}
+
+	.hex-full, .hex-border {
+		width: 20vh;
+		height: 20vh;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: absolute;
+		z-index: -1;
+	}
+
+	#hexa1 {
+		left: 70vh;
+		top: 10vh;
+	}
+
+	#hexa2 {
+		left: 5vh;
+		top: -10vh;
+	}
+
+	#hexa3 {
+		left: 47vh;
+		top: 43vh;
+	}
+
+	#hexa4 {
+		top: 18vh;
+		left: 28vh;
+	}
+
+	#hexa5 {
+		left: 9vh;
+		top: 50vh;
+	}
+
+	#hexa6 {
+		left: 85vh;
+		top: 40vh;
+	}
+
+	.front-1 {
+		grid-column: 7/12;
+		grid-row-start: 2;
+		align-self: center;
+		height: 80vh;
+		padding-top: 10vh;
+		background: rgba(0, 0, 0, .7);
+		padding-left: 5vw;
+	}
+
+
+/*Second Row - Membranes*/
+	#hex-2 {
+		grid-column: 7/13;
+		grid-row-start: 3;
+		height: 90vh;
+		background-image: url(img/hex-right.svg);
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	.front-2 {
+		grid-column: 2/7;
+		grid-row-start: 3;
+		align-self: center;
+		height: 90vh;
+	}
+
+/*Third Row - Graphene*/
+	.hex-3 {
+		grid-column: 1/7;
+		grid-row-start: 4;
+		align-self: center;
+		justify-self: center;
+		max-height: 60vh;
+	}
+
+	.front-3 {
+		grid-column: 7/12;
+		grid-row-start: 4;
+		align-self: center;
+		height: 60vh;
+	}
+
+/*Fourth Row - Recruitment*/
+	.front-4 {
+		grid-column: 1/13;
+		grid-row-start: 5;
+		text-align: center;
+		background-image: url(img/hex-recruit1.svg);
+		background-repeat: no-repeat;
+		background-size: 100% 100%;
+		padding: 10vw;
+		height: 60vh;
+	}
+
+	.front-4 > .wp-block-group__inner-container {
+		background: rgba(0, 0, 0, .6);
+		padding: 5vw;
+	}
+
+/*---------------------------------------------
+NEWS PAGE
+----------------------------------------------*/
+h1, h2.founder, h2.group {
+	font-family: 'Amiri', serif;
+	font-style: italic;
+}
+
+p, li, .mail>a, .sub>.wp-block-group__inner-container>p>strong, .sub>.wp-block-group__inner-container>p>a, .peter>.wp-block-group__inner-container>p>a {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#sidebar {
+	grid-row-start: 2;
+	grid-column: 1/3;
+	margin-left: 4vh;
+}
+
+#blog-container{
+	grid-column: 4/13;
+	grid-row-start: 2;
+	background-image: url(img/hex-right.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	
+}
+
+#blogroll {
+	background-color: rgba(0, 0, 0, .6);
+	margin-right: 5vw;
+	padding-right: 5vw;
+}
+
+#blogroll h1 {
+	text-transform: none;
+	margin-bottom: -.5em;
+}
+
+#blogroll > h1 > a {
+	color: #934db8;
+}
+
+/*---------------------------------------------
+STANDARD SUBPAGE
+----------------------------------------------*/
+.founder {
+	grid-column: 1/13;
+	justify-self: center;
+	
+	margin-bottom: 3vh;
+	
+}
+.img-peter {
+	grid-column: 1/6;
+	grid-row-start: 2;
+}
+
+.img-peter img {
+	max-height: 68vh;
+}
+
+.peter-row {
+	grid-column: 2/13;
+	background-image: url(img/hex-right.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.peter-row > .wp-block-group__inner-container {
+	
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	background-color: rgba(0, 0, 0, .7);
+	margin: 2vh 3vh;
+	padding-right: 10vw;
+}
+
+.peter {
+	grid-column: 6/12;
+	grid-row-start: 2;
+	
+}
+
+.group {
+	grid-row-start: 4;
+	grid-column: 1/13;
+	justify-self: center;
+}
+
+.job {
+	font-style: italic;
+}
+
+.members {
+	grid-row-start: 5;
+	grid-column: 1/13;
+	padding-bottom: 5vh;
+	background-image: url(img/hex-recruit1.svg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	
+}
+.members > .wp-block-group__inner-container {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	background-color: rgba(0, 0, 0, .7);
+	margin: 2vh 3vh;
+}
+
+/*Publications*/
+#tab_container_175 {
+	grid-column: 2/12;
+	grid-row-start: 3;
+}
+
+.sub-h1 {
+	grid-column: 5/9;
+	text-align: center;
+	margin-bottom: -10vh;
+}
+
+.sub {
+	grid-column: 1/13;
+	grid-row-start: 3;
+	background-image: url(img/hex-recruit1.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 80vh;
+}
+
+.sub > .wp-block-group__inner-container {
+	padding: 5vh 5vh;
+	background-color: rgba(0, 0, 0, .7);
+	text-align: center;
+}
+
+.contact {
+	grid-column: 1/13;
+	grid-row-start: 3;
+	background-image: url(img/hex-recruit1.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 50vh;
+}
+
+.contact > .wp-block-group__inner-container {
+	padding: 5vh 5vh;
+	background-color: rgba(0, 0, 0, .7);
+	text-align: center;
+}
+
+
+/*Polymers*/
+.polymers {
+	grid-column: 2/12;
+	grid-row-start: 3;
+}
+
+
+
+
+/*HEXAGON DIVS*/
+
+
+/*.hexagon {
+	position: relative;
+	width: 300px;
+	height: 173.21px;
+	background-color: #64C7CC;
+	margin: 86.60px 0;
+	transform: rotate(30deg);
+}
+
+.hexagon:before,
+.hexagon:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	border-left: 150px solid transparent;
+	border-right: 150px solid transparent;
+}
+
+.hexagon:before {
+	bottom: 100%;
+	border-bottom: 86.60px solid #64C7CC;
+}
+
+.hexagon:after {
+	top: 100%;
+	width: 0;
+	border-top: 86.60px solid #64C7CC;
+	z-index: -1;
+}
+
+.hexagon p, .hexagon h2, .hexagon img {
+	transform:  rotate(-30deg);
+	z-index: 1;
+	text-align: center;
+}*/
+
+/*
+
+.members {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+.img-peter {
+	margin-left: 0;
+}
+
+.img-peter>img, .wp-image-137 {
+	max-height: 40vh;
+}
+
+
+
+#hex {
+	filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 1));
+}
+
+#bg {
+	height: 100px;
+	width: 100px;
+}
+*/
